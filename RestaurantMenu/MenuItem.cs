@@ -19,5 +19,27 @@ namespace RestaurantMenu
             Category = category;
             this.IsNew = isNew;
         }
+
+        public void PrintMenuItem(MenuItem item)
+        {
+            Console.WriteLine($"{item.Description} is a {item.Category} and costs ${item.Price}.");
+
+            if (item.IsNew)
+            {
+                Console.WriteLine("This item is new!");
+            }
+            
+        }
+
+        public override bool Equals(object comparedItem)
+        {
+            if (comparedItem == null || comparedItem.GetType() != this.GetType())
+            {
+                return false;
+            }
+
+            MenuItem item = comparedItem as MenuItem;
+            return item.Description == Description;
+        }
     }
 }

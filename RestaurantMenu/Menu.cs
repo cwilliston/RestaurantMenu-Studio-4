@@ -25,13 +25,20 @@ namespace RestaurantMenu
         {
             MenuItems.Remove(item);
         }
-
-        public void PrintMenu (List<MenuItem> menu)
+        public void PrintMenu()
         {
-            foreach (MenuItem item in menu)
+            foreach(MenuItem item in MenuItems)
             {
                 Console.WriteLine($"{item.Description} is a {item.Category} and costs ${item.Price}.");
             }
         }
-    }
+
+            //public void PrintMenu (List<MenuItem> menu)
+            //{
+            //    foreach (MenuItem item in menu)
+            //    {
+            //        Console.WriteLine($"{item.Description} is a {item.Category} and costs ${item.Price}.");
+            //    }
+            //}
+        }
 }
