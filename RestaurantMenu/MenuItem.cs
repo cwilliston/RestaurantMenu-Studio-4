@@ -20,11 +20,11 @@ namespace RestaurantMenu
             this.IsNew = isNew;
         }
 
-        public void PrintMenuItem(MenuItem item)
+        public void PrintMenuItem()
         {
-            Console.WriteLine($"{item.Description} is a {item.Category} and costs ${item.Price}.");
+            Console.WriteLine($"\n{Description} is a {Category} and costs ${Price}.");
 
-            if (item.IsNew)
+            if (IsNew)
             {
                 Console.WriteLine("This item is new!");
             }

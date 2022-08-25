@@ -5,9 +5,9 @@ namespace RestaurantMenu
     {
         static void Main(string[] args)
         {
-            MenuItem bread = new MenuItem(24.96, "Bread", "Baked Goods", true);
+            MenuItem bread = new MenuItem(24.96, "Bread", "Baked Good", true);
             MenuItem redWine = new MenuItem(16.66, "Red Wine", "Alcohol", false);
-            MenuItem croissant = new MenuItem(12.22, "Croissant", "Baked Goods", true);
+            MenuItem croissant = new MenuItem(12.22, "Croissant", "Baked Good", true);
 
             List<MenuItem> menu = new List<MenuItem>();
             menu.Add(bread);
@@ -20,8 +20,12 @@ namespace RestaurantMenu
 
 
             specialMenu.PrintMenu();
-            
 
+            bread.PrintMenuItem();
+
+            specialMenu.RemoveItem(bread);
+
+            specialMenu.PrintMenu();
         }
     }
 

@@ -27,18 +27,13 @@ namespace RestaurantMenu
         }
         public void PrintMenu()
         {
+            Console.WriteLine("\nMENU:");
+
             foreach(MenuItem item in MenuItems)
             {
                 Console.WriteLine($"{item.Description} is a {item.Category} and costs ${item.Price}.");
             }
         }
 
-            //public void PrintMenu (List<MenuItem> menu)
-            //{
-            //    foreach (MenuItem item in menu)
-            //    {
-            //        Console.WriteLine($"{item.Description} is a {item.Category} and costs ${item.Price}.");
-            //    }
-            //}
         }
 }
