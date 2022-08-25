@@ -15,5 +15,23 @@ namespace RestaurantMenu
             MenuItems = menuItems;
             Updated = updated;
         }
+
+        public void AddItem (MenuItem item)
+        {
+            MenuItems.Add(item);
+        }
+
+        public void RemoveItem (MenuItem item)
+        {
+            MenuItems.Remove(item);
+        }
+
+        public void PrintMenu (List<MenuItem> menu)
+        {
+            foreach (MenuItem item in menu)
+            {
+                Console.WriteLine($"{item.Description} is a {item.Category} and costs ${item.Price}.");
+            }
+        }
     }
 }
